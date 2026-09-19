@@ -1,0 +1,56 @@
+@startwbs
+' Mapa / árbol de navegación - Pawly (Red Social de Mascotas) - ATI 2026-1
+!theme plain
+skinparam backgroundColor #FFFFFF
+skinparam ArrowColor #2D3748
+skinparam node {
+  BackgroundColor #F4F8FF
+  BorderColor #2B6CB0
+  FontName Segoe UI
+  FontSize 12
+  FontColor #1A202C
+}
+
+* Pawly
+
+** <b>Visitante</b>
+*** Landing / Iniciar sesión
+*** Registro
+*** Recuperar contraseña
+
+** <b>Usuario registrado (Dueño)</b>
+*** Inicio (Feed / Muro)
+**** Detalle de publicación (+comentarios)
+**** Crear publicación
+*** Buscar
+**** Resultados: usuarios
+**** Resultados: mascotas
+**** Resultados: publicaciones (palabra clave)
+*** Adopción
+**** Detalle mascota en adopción
+**** Postulación --> abre Chat
+*** Socialización
+**** Detalle mascota para socializar
+**** Solicitud de socialización --> abre Chat
+*** Mensajes
+**** Lista de chats / peticiones
+**** Conversación
+*** Notificaciones
+*** Mi perfil (Humano)
+**** Editar perfil humano
+**** Mis mascotas
+***** Crear mascota
+***** Editar mascota
+***** Perfil de mascota propia
+*** Perfil de otro usuario
+**** Perfil de mascota de otro usuario
+*** Reportar (cuenta / publicación / comentario)
+
+** <b>Administrador</b>
+*** Panel de administración
+*** Gestión de usuarios (CRUD)
+*** Moderación de publicaciones
+*** Moderación de comentarios
+*** Reportes y veto de cuentas
+
+@endwbs

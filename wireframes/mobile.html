@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Pawly — Wireframes Mobile (360x640)</title>
+<link rel="stylesheet" href="wireframe.css">
+</head>
+<body>
+<h1 class="page-title">Pawly — Wireframes Mobile First (Android 360×640)</h1>
+<p class="page-sub">Reto 11 · ATI 2026-1 · Baja fidelidad, borrador local previo a Figma.</p>
+
+<div class="gallery">
+
+<!-- 1. Landing / Login -->
+<div class="screen-block">
+  <div class="screen-label">1. Landing / Iniciar sesión</div>
+  <div class="frame mobile">
+    <div class="wf-content" style="justify-content:center; gap:16px;">
+      <div class="row" style="justify-content:center;"><div class="logo" style="font-weight:700;font-size:20px;">PAWLY</div></div>
+      <div class="field"><label>Usuario o email</label><div class="input"></div></div>
+      <div class="field"><label>Contraseña</label><div class="input"></div></div>
+      <div class="btn block-btn">Iniciar sesión</div>
+      <div class="line w40" style="align-self:center;"></div>
+      <div class="btn secondary block-btn">Crear cuenta</div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. Registro -->
+<div class="screen-block">
+  <div class="screen-label">2. Registro (paso 1 de 2)</div>
+  <div class="frame mobile">
+    <div class="wf-header"><div class="icon-box">←</div><div class="line w40"></div></div>
+    <div class="wf-content">
+      <div class="progress"><div class="fill" style="width:50%"></div></div>
+      <div class="block-title">Datos de la cuenta</div>
+      <div class="field"><label>Username</label><div class="input"></div></div>
+      <div class="field"><label>Email</label><div class="input"></div></div>
+      <div class="field"><label>Contraseña</label><div class="input"></div></div>
+      <div class="field"><label>Confirmar contraseña</label><div class="input"></div></div>
+      <div class="btn block-btn" style="margin-top:auto;">Continuar</div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. Feed -->
+<div class="screen-block">
+  <div class="screen-label">3. Inicio (Feed / Muro)</div>
+  <div class="frame mobile">
+    <div class="wf-header">
+      <div class="logo">PAWLY</div>
+      <div class="wf-search">Buscar…</div>
+      <div class="icon-box">♡</div>
+      <div class="icon-box">✉</div>
+    </div>
+    <div class="wf-content scroll-y">
+      <div class="block">
+        <div class="row"><div class="avatar"></div><div style="flex:1"><div class="line w60"></div><div class="line w40"></div></div></div>
+        <div class="line w100" style="margin-top:8px;"></div>
+        <div class="line w80"></div>
+        <div class="img-ph" style="height:90px;margin-top:6px;">imagen</div>
+        <div class="row" style="margin-top:6px;"><div class="chip">♡ 12</div><div class="chip">💬 3 comentarios</div></div>
+      </div>
+      <div class="block">
+        <div class="row"><div class="avatar"></div><div style="flex:1"><div class="line w60"></div><div class="line w40"></div></div></div>
+        <div class="line w100" style="margin-top:8px;"></div>
+        <div class="row" style="margin-top:6px;"><div class="chip">♡ 4</div><div class="chip">💬 1 comentario</div></div>
+      </div>
+    </div>
+    <div class="wf-bottomnav">
+      <div class="item active"><div class="dot"></div>Inicio</div>
+      <div class="item"><div class="dot"></div>Buscar</div>
+      <div class="item"><div class="dot"></div>Adopción</div>
+      <div class="item"><div class="dot"></div>Mensajes</div>
+      <div class="item"><div class="dot"></div>Perfil</div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. Detalle publicación -->
+<div class="screen-block">
+  <div class="screen-label">4. Detalle de publicación + comentarios</div>
+  <div class="frame mobile">
+    <div class="wf-header"><div class="icon-box">←</div><div class="line w40"></div></div>
+    <div class="wf-content scroll-y">
+      <div class="block">
+        <div class="row"><div class="avatar"></div><div style="flex:1"><div class="line w60"></div><div class="line w40"></div></div></div>
+        <div class="line w100" style="margin-top:8px;"></div>
+        <div class="img-ph" style="height:110px;margin-top:6px;">imagen</div>
+      </div>
+      <div class="block-title">Comentarios</div>
+      <div class="row"><div class="avatar sm"></div><div class="block" style="flex:1;padding:6px 8px;"><div class="line w80"></div></div></div>
+      <div class="row"><div class="avatar sm"></div><div class="block" style="flex:1;padding:6px 8px;"><div class="line w60"></div></div></div>
+      <div class="row" style="margin-top:auto;"><div class="input" style="flex:1;"></div><div class="btn">Enviar</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. Buscar / resultados -->
+<div class="screen-block">
+  <div class="screen-label">5. Buscar / Resultados</div>
+  <div class="frame mobile">
+    <div class="wf-header"><div class="icon-box">←</div><div class="wf-search">nombre, username…</div></div>
+    <div class="wf-topnav">
+      <div class="item active">Usuarios</div>
+      <div class="item">Mascotas</div>
+      <div class="item">Publicaciones</div>
+    </div>
+    <div class="wf-content scroll-y">
+      <div class="row block" style="align-items:center;"><div class="avatar"></div><div style="flex:1"><div class="line w60"></div></div><div class="chip">Seguir</div></div>
+      <div class="row block" style="align-items:center;"><div class="avatar"></div><div style="flex:1"><div class="line w40"></div></div><div class="chip">Seguir</div></div>
+      <div class="row block" style="align-items:center;"><div class="avatar"></div><div style="flex:1"><div class="line w60"></div></div><div class="chip">Seguir</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. Feed adopcion -->
+<div class="screen-block">
+  <div class="screen-label">6. Feed de Adopción</div>
+  <div class="frame mobile">
+    <div class="wf-header"><div class="icon-box">←</div><div class="line w40"></div></div>
+    <div class="wf-content">
+      <div class="row wrap"><div class="chip on">Cercanía</div><div class="chip">Perro</div><div class="chip">Gato</div></div>
+      <div class="grid2 scroll-y" style="overflow-y:auto;">
+        <div class="block" style="padding:6px;"><div class="img-ph" style="height:70px;">foto</div><div class="line w80" style="margin-top:6px;"></div><div class="line w40"></div></div>
+        <div class="block" style="padding:6px;"><div class="img-ph" style="height:70px;">foto</div><div class="line w80" style="margin-top:6px;"></div><div class="line w40"></div></div>
+        <div class="block" style="padding:6px;"><div class="img-ph" style="height:70px;">foto</div><div class="line w80" style="margin-top:6px;"></div><div class="line w40"></div></div>
+        <div class="block" style="padding:6px;"><div class="img-ph" style="height:70px;">foto</div><div class="line w80" style="margin-top:6px;"></div><div class="line w40"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 7. Detalle mascota adopcion -->
+<div class="screen-block">
+  <div class="screen-label">7. Detalle mascota en adopción</div>
+  <div class="frame mobile">
+    <div class="wf-header"><div class="icon-box">←</div><div class="line w40"></div></div>
+    <div class="wf-content scroll-y">
+      <div class="img-ph" style="height:150px;">foto mascota</div>
+      <div class="line w60"></div>
+      <div class="row"><div class="chip">Perro</div><div class="chip">Macho</div><div class="chip">2 años</div></div>
+      <div class="block-title">Descripción</div>
+      <div class="line w100"></div><div class="line w80"></div>
+      <div class="block-title">Dueño</div>
+      <div class="row"><div class="avatar sm"></div><div class="line w40"></div></div>
+      <div class="btn block-btn" style="margin-top:auto;">Postularme para adoptar</div>
+    </div>
+  </div>
+</div>
+
+<!-- 8. Mensajes lista -->
+<div class="screen-block">
+  <div class="screen-label">8. Mensajes (lista de chats)</div>
+  <div class="frame mobile">
+    <div class="wf-header"><div class="logo">Mensajes</div></div>
+    <div class="wf-content scroll-y" style="gap:0;">
+      <div class="row" style="padding:8px 0;border-bottom:1px solid #e5e7eb;"><div class="avatar"></div><div style="flex:1"><div class="line w60"></div><div class="line w80"></div></div><div class="badge">2</div></div>
+      <div class="row" style="padding:8px 0;border-bottom:1px solid #e5e7eb;"><div class="avatar"></div><div style="flex:1"><div class="line w40"></div><div class="line w60"></div></div></div>
+      <div class="row" style="padding:8px 0;border-bottom:1px solid #e5e7eb;"><div class="avatar"></div><div style="flex:1"><div class="line w60"></div><div class="line w40"></div></div></div>
+    </div>
+    <div class="wf-bottomnav">
+      <div class="item"><div class="dot"></div>Inicio</div>
+      <div class="item"><div class="dot"></div>Buscar</div>
+      <div class="item"><div class="dot"></div>Adopción</div>
+      <div class="item active"><div class="dot"></div>Mensajes</div>
+      <div class="item"><div class="dot"></div>Perfil</div>
+    </div>
+  </div>
+</div>
+
+<!-- 9. Conversacion -->
+<div class="screen-block">
+  <div class="screen-label">9. Conversación</div>
+  <div class="frame mobile">
+    <div class="wf-header"><div class="icon-box">←</div><div class="avatar sm"></div><div class="line w40"></div></div>
+    <div class="wf-content scroll-y" style="gap:8px;">
+      <div class="bubble them">Hola, ¿sigue disponible?</div>
+      <div class="bubble me">¡Sí! ¿Quieres coordinar?</div>
+      <div class="bubble them">Claro, este finde</div>
+    </div>
+    <div class="row" style="padding:10px;border-top:1px solid #9ca3af;"><div class="input" style="flex:1;"></div><div class="btn">Enviar</div></div>
+  </div>
+</div>
+
+<!-- 10. Notificaciones -->
+<div class="screen-block">
+  <div class="screen-label">10. Notificaciones</div>
+  <div class="frame mobile">
+    <div class="wf-header"><div class="logo">Notificaciones</div></div>
+    <div class="wf-content scroll-y" style="gap:0;">
+      <div class="row" style="padding:8px 0;border-bottom:1px solid #e5e7eb;"><div class="icon-box">💬</div><div style="flex:1"><div class="line w80"></div><div class="line w40"></div></div></div>
+      <div class="row" style="padding:8px 0;border-bottom:1px solid #e5e7eb;"><div class="icon-box">🐾</div><div style="flex:1"><div class="line w60"></div><div class="line w40"></div></div></div>
+      <div class="row" style="padding:8px 0;border-bottom:1px solid #e5e7eb;"><div class="icon-box">✉</div><div style="flex:1"><div class="line w80"></div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 11. Mi perfil -->
+<div class="screen-block">
+  <div class="screen-label">11. Mi perfil (Humano)</div>
+  <div class="frame mobile">
+    <div class="wf-header"><div class="icon-box">←</div><div class="line w40"></div><div class="spacer"></div><div class="icon-box">⚙</div></div>
+    <div class="wf-content scroll-y">
+      <div class="row"><div class="avatar lg"></div><div><div class="line w60"></div><div class="line w40"></div></div></div>
+      <div class="line w100"></div><div class="line w80"></div>
+      <div class="btn secondary block-btn">Editar perfil</div>
+      <div class="block-title">Mis mascotas</div>
+      <div class="row wrap">
+        <div class="block" style="padding:6px;width:90px;"><div class="img-ph" style="height:50px;">foto</div><div class="line w60" style="margin-top:4px;"></div></div>
+        <div class="block" style="padding:6px;width:90px;"><div class="img-ph" style="height:50px;">foto</div><div class="line w40" style="margin-top:4px;"></div></div>
+        <div class="block" style="padding:6px;width:90px;display:flex;align-items:center;justify-content:center;color:#9ca3af;font-size:20px;">+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 12. Crear/editar mascota -->
+<div class="screen-block">
+  <div class="screen-label">12. Crear / editar mascota</div>
+  <div class="frame mobile">
+    <div class="wf-header"><div class="icon-box">←</div><div class="line w40"></div></div>
+    <div class="wf-content scroll-y">
+      <div class="img-ph" style="height:90px;">foto mascota</div>
+      <div class="field"><label>Nombre</label><div class="input"></div></div>
+      <div class="grid2">
+        <div class="field"><label>Especie</label><div class="input"></div></div>
+        <div class="field"><label>Sexo</label><div class="input"></div></div>
+      </div>
+      <div class="field"><label>Fecha de nacimiento</label><div class="input"></div></div>
+      <div class="field"><label>Descripción</label><div class="input ta"></div></div>
+      <div class="btn block-btn">Guardar mascota</div>
+    </div>
+  </div>
+</div>
+
+<!-- 13. Admin -->
+<div class="screen-block">
+  <div class="screen-label">13. Panel de administración</div>
+  <div class="frame mobile">
+    <div class="wf-header"><div class="logo">Admin</div></div>
+    <div class="wf-content scroll-y">
+      <div class="grid2">
+        <div class="block"><div class="line w40"></div><div class="line w60" style="height:14px;"></div></div>
+        <div class="block"><div class="line w40"></div><div class="line w60" style="height:14px;"></div></div>
+      </div>
+      <div class="block-title">Reportes recientes</div>
+      <div class="row block"><div class="line w60"></div><div class="chip">Ver</div></div>
+      <div class="row block"><div class="line w40"></div><div class="chip">Ver</div></div>
+      <div class="row wrap" style="margin-top:auto;">
+        <div class="chip on">Usuarios</div><div class="chip">Publicaciones</div><div class="chip">Comentarios</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

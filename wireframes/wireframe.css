@@ -1,0 +1,186 @@
+/* Wireframes de baja fidelidad - Pawly (ATI Reto 11) */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 40px;
+  background: #e5e7eb;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1f2937;
+}
+h1.page-title {
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+p.page-sub {
+  margin: 0 0 32px;
+  color: #4b5563;
+  font-size: 13px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: flex-start;
+}
+.screen-block { display: flex; flex-direction: column; gap: 8px; }
+.screen-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+.frame {
+  background: #ffffff;
+  border: 2px solid #9ca3af;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.frame.mobile { width: 360px; height: 640px; }
+.frame.desktop { width: 1440px; height: 1024px; transform-origin: top left; }
+
+/* --- regiones estructurales --- */
+.wf-header {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 2px solid #9ca3af;
+  background: #f3f4f6;
+}
+.wf-header .logo { font-weight: 700; font-size: 15px; letter-spacing: .5px; }
+.wf-header .spacer { flex: 1; }
+.wf-search {
+  flex: 1;
+  height: 26px;
+  border: 1px solid #9ca3af;
+  border-radius: 13px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+.icon-box {
+  width: 22px; height: 22px;
+  border: 1px solid #9ca3af;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; color: #6b7280; flex: 0 0 auto;
+}
+.avatar {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: repeating-linear-gradient(45deg,#d1d5db,#d1d5db 4px,#e5e7eb 4px,#e5e7eb 8px);
+  border: 1px solid #9ca3af; flex: 0 0 auto;
+}
+.avatar.sm { width: 20px; height: 20px; }
+.avatar.lg { width: 64px; height: 64px; }
+
+.wf-body { flex: 1 1 auto; display: flex; overflow: hidden; }
+.wf-content { flex: 1 1 auto; padding: 12px; overflow: hidden; display: flex; flex-direction: column; gap: 10px; }
+
+.wf-sidebar {
+  flex: 0 0 220px;
+  border-right: 2px solid #9ca3af;
+  background: #f9fafb;
+  padding: 14px 10px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.wf-sidebar .item {
+  padding: 8px 10px; border-radius: 6px; font-size: 12px; color: #374151;
+  border: 1px solid transparent;
+}
+.wf-sidebar .item.active { background: #e5e7eb; border-color: #9ca3af; font-weight: 600; }
+
+.wf-bottomnav {
+  flex: 0 0 auto;
+  display: flex;
+  border-top: 2px solid #9ca3af;
+  background: #f3f4f6;
+}
+.wf-bottomnav .item {
+  flex: 1; text-align: center; padding: 8px 0; font-size: 10px; color: #6b7280;
+}
+.wf-bottomnav .item.active { color: #1f2937; font-weight: 700; }
+.wf-bottomnav .dot {
+  width: 16px; height: 16px; margin: 0 auto 3px; border: 1.5px solid #6b7280; border-radius: 4px;
+}
+
+.wf-topnav {
+  flex: 0 0 auto;
+  display: flex; gap: 18px;
+  padding: 0 20px 10px;
+  border-bottom: 2px solid #9ca3af;
+  background: #f3f4f6;
+}
+.wf-topnav .item { font-size: 12px; padding: 6px 4px; color: #6b7280; }
+.wf-topnav .item.active { color: #1f2937; font-weight: 700; border-bottom: 2px solid #1f2937; }
+
+/* --- bloques de contenido --- */
+.block {
+  border: 1px solid #9ca3af;
+  border-radius: 6px;
+  background: #ffffff;
+  padding: 10px;
+}
+.block-title { font-size: 12px; font-weight: 700; margin-bottom: 6px; color: #374151; }
+.line { height: 8px; background: #d1d5db; border-radius: 3px; margin: 5px 0; }
+.line.w60 { width: 60%; }
+.line.w80 { width: 80%; }
+.line.w40 { width: 40%; }
+.line.w100 { width: 100%; }
+
+.img-ph {
+  background: repeating-linear-gradient(135deg,#e5e7eb,#e5e7eb 6px,#f3f4f6 6px,#f3f4f6 12px);
+  border: 1px solid #9ca3af;
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  color: #9ca3af; font-size: 10px;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid #374151;
+  background: #374151;
+  color: #fff;
+  font-size: 11px;
+  padding: 7px 14px;
+  border-radius: 5px;
+  text-align: center;
+}
+.btn.secondary { background: #fff; color: #374151; }
+.btn.block-btn { display: block; width: 100%; }
+
+.field { display: flex; flex-direction: column; gap: 3px; }
+.field label { font-size: 10px; color: #6b7280; }
+.field .input {
+  height: 24px; border: 1px solid #9ca3af; border-radius: 4px; background: #fff;
+}
+.field .input.ta { height: 44px; }
+
+.chip {
+  border: 1px solid #9ca3af; border-radius: 12px; padding: 3px 9px; font-size: 10px; color: #4b5563;
+}
+.chip.on { background: #374151; color: #fff; border-color: #374151; }
+.row { display: flex; gap: 8px; align-items: center; }
+.row.wrap { flex-wrap: wrap; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.grid3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+.scroll-y { overflow-y: auto; }
+
+.progress { height: 6px; background: #e5e7eb; border-radius: 3px; overflow: hidden; border: 1px solid #9ca3af; }
+.progress .fill { height: 100%; background: #374151; }
+
+.badge {
+  min-width: 14px; height: 14px; border-radius: 8px; background: #374151; color: #fff;
+  font-size: 8px; display: flex; align-items: center; justify-content: center; padding: 0 4px;
+}
+
+.bubble { max-width: 70%; padding: 7px 10px; border-radius: 10px; font-size: 11px; border: 1px solid #9ca3af; }
+.bubble.me { align-self: flex-end; background: #374151; color: #fff; border-color: #374151; }
+.bubble.them { align-self: flex-start; background: #f3f4f6; color: #1f2937; }
+
+table.wf-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+table.wf-table th, table.wf-table td { border: 1px solid #d1d5db; padding: 6px 8px; text-align: left; }
+table.wf-table th { background: #f3f4f6; }
