@@ -20,14 +20,14 @@ Abrir `prototipo/mobile.html` o `prototipo/desktop.html` en el navegador. Las fu
 
 ## Regenerar las imágenes
 
-Con el navegador automatizado (`agent-browser`) abierto en la galería y una captura completa (`--full`) guardada, ejecutar:
+Requiere `agent-browser` en el PATH y Pillow en Python. Desde `prototipo/`:
 
 ```
-python exportar_pantallas.py _full_desktop.png rects_desktop.json desktop export
-python exportar_pantallas.py _full_mobile.png rects_mobile.json mobile export
+bash exportar_por_frame.sh desktop.html desktop export
+bash exportar_por_frame.sh mobile.html mobile export
 ```
 
-`rects.json` es la lista de posiciones de cada `.frame` (id, x, y, w, h, label) en coordenadas de documento.
+El script abre la galería, desplaza el viewport hasta cada `.frame`, captura y recorta. `exportar_pantallas.py` es la alternativa a partir de una captura de página completa, útil solo para galerías cortas (Chrome limita la altura de esas capturas).
 
 ## Proyecto principal
 

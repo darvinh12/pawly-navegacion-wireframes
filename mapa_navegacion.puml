@@ -42,7 +42,8 @@ skinparam node {
 ***** Editar mascota (incluye marcar en adopción)
 ***** Perfil de mascota propia
 **** Mis postulaciones
-*** Perfil de otro usuario
+**** Ajustes (contraseña, correo, notificaciones, idioma, tema, cerrar sesión)
+*** Perfil de otro usuario (seguir, petición de chat)
 **** Perfil de mascota de otro usuario
 *** Reportar (cuenta / publicación / comentario)
 

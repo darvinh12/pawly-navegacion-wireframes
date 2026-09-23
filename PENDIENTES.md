@@ -11,16 +11,13 @@ Lo que ya está en este repo: árbol de navegación acotado a Adopciones, arquit
 - Organizar el archivo en páginas: `Portada`, `Componentes`, `Estilos`, `Mobile`, `Desktop`.
 - Trabajar el archivo en equipo dentro del team de Figma.
 
-## 2. Pantallas que no están en el prototipo
+## 2. Cobertura de casos de uso
 
-Quedaron fuera porque son variantes directas de otra pantalla ya cubierta. Agregarlas en Figma si el profesor pide una pantalla por cada nodo del árbol:
+Todos los casos de uso del Product Backlog (UC-01 a UC-31, menos UC-19 a UC-21 de socialización) tienen pantalla en el prototipo; la tabla de trazabilidad está en la sección 12 de `arquitectura_informacion.md`. Variantes que se pueden agregar en Figma si el profesor pide una pantalla por cada nodo del árbol:
 
-- Recuperar contraseña (variante de Iniciar sesión).
-- Registro paso 2 de 2 (perfil humano: nombre, foto, cédula, fecha de nacimiento, género, ciudad).
-- Perfil de otro usuario (variante de Mi perfil en modo solo lectura, con botones Seguir y Chatear).
 - Perfil de mascota propia y de otro usuario (variante del detalle de mascota en adopción, sin el botón de postulación).
-- Moderación de publicaciones y de comentarios en Admin (mismo patrón que la tabla de usuarios).
-- HU-05: login de usuario migrado con cédula como contraseña y cambio obligatorio en el primer ingreso.
+- Moderación de publicaciones y de comentarios en Admin como pestañas propias (mismo patrón que la tabla de usuarios).
+- Pantalla de "Cambiar contraseña" al primer ingreso de un usuario migrado (hoy está resuelto dentro de Ajustes).
 
 ## 3. Exportables finales
 

@@ -90,4 +90,40 @@ Los textos de interfaz (etiquetas, botones, mensajes de ayuda y de sistema) no p
 
 ## 11. Prototipos
 
-Carpeta `prototipo/`: `mobile.html` (Android 360×640, 14 pantallas) y `desktop.html` (1440×1024, 13 pantallas), construidos con `estilos.css` como sistema de diseño compartido. Las imágenes exportadas de cada pantalla están en `prototipo/export/`. La carpeta `wireframes/` conserva la versión de baja fidelidad previa como referencia del proceso.
+Carpeta `prototipo/`: `mobile.html` (Android 360×640, 20 pantallas) y `desktop.html` (1440×1024, 19 pantallas), construidos con `estilos.css` como sistema de diseño compartido. Las imágenes exportadas de cada pantalla están en `prototipo/export/`. La carpeta `wireframes/` conserva la versión de baja fidelidad previa como referencia del proceso.
+
+## 12. Trazabilidad: casos de uso del Product Backlog → pantallas
+
+Los códigos son los de los issues del repositorio `Pawly-ATI-UCV/pawly` (Reto 9). UC-19, UC-20 y UC-21 (socialización) quedan fuera del MVP del equipo.
+
+| Caso de uso | Pantalla mobile | Pantalla desktop |
+|---|---|---|
+| UC-01 Registrarse | 02 Registro paso 1, 16 Registro paso 2 | 02, 15 |
+| UC-02 Iniciar sesión (incluye migrados con cédula) | 01 Iniciar sesión, 20 Ajustes (cambiar contraseña) | 01, 19 |
+| UC-03 Recuperar contraseña | 15 Recuperar contraseña | 14 |
+| UC-04 Cerrar sesión | 20 Ajustes | 03 barra lateral, 19 |
+| UC-05 Editar perfil humano | 16 (mismo formulario del paso 2) | 15 |
+| UC-06 Crear perfil de mascota | 12 Mi perfil (Agregar), 13 formulario | 11, 12 |
+| UC-07 Editar perfil de mascota | 13 Editar mascota | 12 |
+| UC-08 Eliminar perfil de mascota | 13 (menú de la mascota) | 12 Zona de peligro |
+| UC-09 Publicar | 03 compositor, 17 Crear publicación | 03, 16 |
+| UC-10 Adjuntar multimedia | 17 (foto, video, audio, enlace) | 16 |
+| UC-11 Etiquetar | 17 (etiquetados) | 16 |
+| UC-12 Comentar | 04 Publicación | 04 |
+| UC-13 Responder comentario | 04 (enlace Responder) | 04 (respuesta anidada) |
+| UC-14 Buscar | 05 Buscar | 05 |
+| UC-15 Seguir usuario | 05, 18 Perfil de otro usuario | 05, 17 |
+| UC-16 Marcar mascota en adopción | 13 bloque "Poner en adopción" | 12 |
+| UC-17 Navegar feed de adopciones | 06 Adopción | 06 |
+| UC-18 Postularse para adoptar | 07 Mascota, 08 Postulación | 07, 08 |
+| UC-22 Enviar petición de chat | 18 (botón), 09 Mensajes (aceptar/rechazar) | 17, 09 |
+| UC-23 Chatear | 10 Conversación | 09 |
+| UC-24 Abrir chat | 10 (mensaje de sistema) | 09 |
+| UC-25 Recibir notificación | 11 Notificaciones | 10 |
+| UC-26 Enviar correo | 20 Ajustes (interruptor "También por correo") | 19 |
+| UC-27 Reportar contenido | 19 Reportar | 18 |
+| UC-28 Vetar cuenta | 14 Admin | 13 |
+| UC-29 Bloquear comentario | 14 Admin (pestaña Reportes) | 13 |
+| UC-30 Bloquear publicación | 14 Admin | 13 |
+| UC-31 Gestionar usuarios | 14 Admin | 13 |
+| NFR-01 adaptativo, idioma, tema | Todo el prototipo; 20 Ajustes (idioma y tema) | 19 |
