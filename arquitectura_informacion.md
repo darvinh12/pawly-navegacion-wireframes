@@ -87,7 +87,23 @@ Las pantallas muestran los atributos del `modelo_dominio.puml`: `Usuario` (usern
 
 ## 10. Internacionalización
 
-Los textos de interfaz (etiquetas, botones, mensajes de ayuda y de sistema) no provienen del modelo de dominio y quedan sujetos a i18n. Se recomienda externalizarlos en archivos planos JSON por idioma (`es.json` por defecto, `en.json` a futuro) en lugar de guardarlos en base de datos, porque no varían por usuario. Los valores enumerados del dominio (`especie`, `sexo`, `tipo` y `estado` de la solicitud) se traducen con un diccionario de etiquetas asociado al enum. No se detectó impacto que obligue a modificar el modelo, salvo eliminar del alcance del MVP los valores `pareja` y `socializar` del enum `tipo` de `Solicitud` y los booleanos `buscaPareja` y `buscaSocializar` de `PerfilMascota`.
+Los textos de interfaz (etiquetas, botones, mensajes de ayuda y de sistema) no provienen del modelo de dominio y quedan sujetos a i18n. Se externalizan en archivos planos JSON por idioma (`es.json` por defecto, `en.json` a futuro) en lugar de guardarlos en base de datos, porque no varían por usuario. Los valores enumerados del dominio (`especie`, `sexo`, `estado` de la postulación, `motivo` del reporte) se traducen con un diccionario de etiquetas asociado a cada enum. El idioma y el tema elegidos por cada persona sí se guardan en el modelo, en `Usuario`.
+
+## 10.1 Cambios al modelo de dominio
+
+Al revisar las pantallas contra el modelo de la Entrega 1 aparecieron datos que no estaban modelados. El modelo actualizado está en `modelo_dominio.puml` / `.png` / `.svg`.
+
+| Cambio | Motivo (pantalla) |
+|---|---|
+| `Usuario` agrega `requiereCambioClave`, `idioma`, `tema`, `notificarPorCorreo` | Ajustes: usuarios migrados que entran con su cédula, idioma, tema claro/oscuro y aviso por correo (UC-02, UC-26, NFR-01) |
+| `PerfilMascota` quita `buscaPareja` y `buscaSocializar`; agrega `ubicacion` y `caracteristicasBuscadas` | Alcance solo Adopciones; Editar mascota y feed por cercanía (UC-16, UC-17) |
+| `Solicitud` se reemplaza por `Postulacion` (`mensaje`, `estado` con `cancelada`) | Postulación con mensaje y opción de cancelarla desde el chat (UC-18) |
+| Nueva `PeticionChat` | Peticiones de chat que se aceptan o rechazan en Mensajes (UC-22) |
+| Nueva `Multimedia` (foto, video, audio, enlace) | Crear publicación (UC-10) |
+| Etiquetas de `Publicacion` a personas y mascotas | Crear publicación (UC-11) |
+| `Comentario` responde a otro `Comentario` | Respuestas anidadas (UC-13) |
+| Nuevo `Reporte` (objeto, motivo, detalle, estado) | Reportar contenido y panel de reportes del Admin (UC-27, UC-28) |
+| `Notificacion.tipo` con valores definidos | Íconos y acciones por tipo en Notificaciones (UC-25) |
 
 ## 11. Prototipos
 
