@@ -76,7 +76,8 @@ Botón primario (terracota), secundario (contorno), oscuro y de peligro; enlace 
 ## 8. Sistema visual del prototipo
 
 - **Tipografía**: Bricolage Grotesque (titulares, 600 a 800) y Figtree (texto, 400 a 700). Ambas en Google Fonts y disponibles en Figma.
-- **Color**: fondo crema `#FBF7F2`, superficie `#FFFDFA`, texto `#1F1A17`, texto secundario `#7A6F68`, acento terracota `#E8683A` (acciones principales y adopción), verde `#3F7D5A` para estados positivos, ámbar y rojo para moderación.
+- **Color**: lila de marca `#AE95C7` (tomado del logotipo de Pawly) para acciones principales, con `#7E62A0` para enlaces y estados activos sobre fondo claro y `#EFE9F5` como versión suave; fondo crema `#FBF7F2`, superficie `#FFFDFA`, texto `#1F1A17`, texto secundario `#7A6F68`; verde `#3F7D5A` para "En adopción" y estados positivos, ámbar y rojo para moderación.
+- **Logotipo**: el de `Media de pawly/` (corazón con perro, gato y ave más la palabra "pawly"). En las barras se usa el isotipo más la palabra en horizontal; en Iniciar sesión, el logotipo completo en vertical.
 - **Radios**: 8, 14 y 20 px, más píldora para botones y chips.
 - **Retícula**: mobile a una columna sobre 360 px con márgenes de 16 px; desktop sobre 12 columnas en 1440 px, con barra lateral de 240 px, contenido central de 680 px y columna auxiliar de 320 px. En mobile la columna auxiliar se oculta y la barra lateral se convierte en barra inferior.
 

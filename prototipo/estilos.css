@@ -9,17 +9,17 @@
   --muted: #7A6F68;
   --line: #E9E0D6;
   --line-2: #D9CFC3;
-  --accent: #E8683A;
-  --accent-2: #C9532A;
-  --accent-soft: #FCE9E0;
+  --accent: #AE95C7;
+  --accent-2: #7E62A0;
+  --accent-soft: #EFE9F5;
   --green: #3F7D5A;
   --green-soft: #E6F1EA;
   --amber: #B7791F;
   --amber-soft: #FBF0DC;
   --red: #B94A48;
   --red-soft: #F9E4E3;
-  --blue: #3B6EA8;
-  --blue-soft: #E4ECF6;
+  --blue: #5B7DB1;
+  --blue-soft: #E7EDF7;
 
   --font-display: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
   --font-body: "Figtree", "Segoe UI", Arial, sans-serif;
@@ -278,3 +278,9 @@ p { margin: 0; }
 .comment .meta { font-size: 11px; color: var(--muted); margin-top: 4px; padding-left: 4px; }
 .aside-box { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 14px; display: flex; flex-direction: column; gap: 10px; }
 .aside-box .t { font-family: var(--font-display); font-weight: 700; font-size: 14px; }
+
+/* --- logotipo --- */
+.logo-mark { height: 30px; width: auto; }
+.logo-word { height: 20px; width: auto; }
+.logo-full { width: 150px; height: auto; }
+.brand .admin { font-family: var(--font-body); font-weight: 600; font-size: 13px; color: var(--muted); margin-left: 4px; }

@@ -9,7 +9,8 @@ Reto 11 de ATI (2026-1), proyecto **Pawly** (red social de mascotas). Funcionali
 - `prototipo/` — prototipos de alta fidelidad en HTML/CSS:
   - `mobile.html` — Android 360×640, 14 pantallas (mobile first).
   - `desktop.html` — 1440×1024, 13 pantallas.
-  - `estilos.css` — sistema de diseño compartido (tipografía, color, componentes).
+  - `estilos.css` — sistema de diseño compartido (tipografía, color de marca `#AE95C7`, componentes).
+  - `img/logo-*.png` — logotipo de Pawly (completo, isotipo y palabra) recortado de `Media de pawly/`.
   - `export/` — una imagen PNG por pantalla, listas para entregar.
   - `exportar_pantallas.py` — recorta las pantallas a partir de una captura completa de la galería.
 - `wireframes/` — versión de baja fidelidad previa, conservada como referencia del proceso.
