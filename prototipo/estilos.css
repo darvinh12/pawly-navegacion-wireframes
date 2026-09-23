@@ -36,7 +36,7 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body {
-  padding: 40px;
+  padding: 24px;
   background: #E7E1DA;
   font-family: var(--font-body);
   color: var(--ink);
