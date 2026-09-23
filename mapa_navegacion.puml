@@ -1,5 +1,6 @@
 @startwbs
 ' Mapa / árbol de navegación - Pawly (Red Social de Mascotas) - ATI 2026-1
+' Funcionalidad núcleo elegida por el equipo: Adopciones
 !theme plain
 skinparam backgroundColor #FFFFFF
 skinparam ArrowColor #2D3748
@@ -15,7 +16,7 @@ skinparam node {
 
 ** <b>Visitante</b>
 *** Landing / Iniciar sesión
-*** Registro
+*** Registro (2 pasos: cuenta + perfil humano)
 *** Recuperar contraseña
 
 ** <b>Usuario registrado (Dueño)</b>
@@ -26,22 +27,21 @@ skinparam node {
 **** Resultados: usuarios
 **** Resultados: mascotas
 **** Resultados: publicaciones (palabra clave)
-*** Adopción
-**** Detalle mascota en adopción
-**** Postulación --> abre Chat
-*** Socialización
-**** Detalle mascota para socializar
-**** Solicitud de socialización --> abre Chat
+*** Adopción (feed por cercanía)
+**** Detalle de mascota en adopción
+**** Postulación --> abre Chat con el dueño
 *** Mensajes
-**** Lista de chats / peticiones
+**** Peticiones de chat (aceptar / rechazar)
+**** Lista de chats
 **** Conversación
 *** Notificaciones
 *** Mi perfil (Humano)
 **** Editar perfil humano
 **** Mis mascotas
 ***** Crear mascota
-***** Editar mascota
+***** Editar mascota (incluye marcar en adopción)
 ***** Perfil de mascota propia
+**** Mis postulaciones
 *** Perfil de otro usuario
 **** Perfil de mascota de otro usuario
 *** Reportar (cuenta / publicación / comentario)

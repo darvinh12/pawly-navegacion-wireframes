@@ -1,80 +1,93 @@
-# Reto 11 — Árbol de navegación, arquitectura de información y wireframes
+# Reto 11 — Árbol de navegación, arquitectura de información y prototipos
 
 Proyecto: Pawly (Red Social de Mascotas) · ATI 2026-1
 
+Funcionalidad núcleo elegida por el equipo: **Adopciones**. De las tres funcionalidades parecidas del enunciado (adopción, pareja y socialización), el MVP del equipo cubre solo adopción. El árbol de navegación, las pantallas y el modelo quedan acotados a ese alcance.
+
 ## 1. Árbol de navegación
 
-Ver `mapa_navegacion.puml` / `mapa_navegacion.png` / `mapa_navegacion.svg`. Construido a partir de los actores y casos de uso de `assets/casos_de_uso.puml` (Visitante, Usuario registrado/Dueño, Administrador) y de las historias del `backlog_github.csv`.
+Ver `mapa_navegacion.puml` / `mapa_navegacion.png` / `mapa_navegacion.svg`. Construido a partir de los actores y casos de uso de `assets/casos_de_uso.puml` (Visitante, Usuario registrado/Dueño, Administrador) y de las historias del `backlog_github.csv`, dejando fuera las historias de socialización (HU-25 a HU-27).
 
 ## 2. Tipos de página identificados
 
 | Página | Actor(es) | Tipo |
 |---|---|---|
 | Landing / Iniciar sesión | Visitante | Formulario |
-| Registro | Visitante | Formulario (wizard 2 pasos: datos básicos + perfil humano) |
+| Registro | Visitante | Formulario (wizard 2 pasos: cuenta + perfil humano) |
 | Recuperar contraseña | Visitante | Formulario |
 | Feed / Muro (Inicio) | Usuario | Índice (listado homogéneo de publicaciones) |
 | Detalle de publicación | Usuario | Detalle + índice anidado (comentarios) |
-| Crear publicación | Usuario | Formulario (modal) |
+| Crear publicación | Usuario | Formulario (compositor en el feed) |
 | Buscar / Resultados | Usuario | Consulta + índice segmentado (usuarios / mascotas / publicaciones) |
-| Feed de Adopción | Usuario | Índice filtrable |
+| Feed de Adopción | Usuario | Índice filtrable por especie, edad y cercanía |
 | Detalle mascota en adopción | Usuario | Detalle + CTA (visita guiada hacia Chat) |
-| Feed de Socialización | Usuario | Índice filtrable |
-| Mensajes (lista) | Usuario | Índice |
+| Postulación | Usuario | Formulario corto (bottom sheet en mobile, modal en desktop) |
+| Mensajes (peticiones + lista) | Usuario | Índice |
 | Conversación | Usuario | Detalle conversacional |
 | Notificaciones | Usuario | Índice cronológico |
-| Mi perfil (Humano) | Usuario | Detalle + índice anidado (mascotas, publicaciones) |
+| Mi perfil (Humano) | Usuario | Detalle + índices anidados (mascotas, publicaciones, postulaciones) |
 | Editar perfil humano | Usuario | Formulario |
 | Perfil de mascota | Usuario | Detalle |
-| Crear/editar mascota | Usuario | Formulario |
+| Crear/editar mascota | Usuario | Formulario (incluye el bloque "Poner en adopción") |
 | Perfil de otro usuario | Usuario | Detalle (solo lectura + acciones: seguir, chat) |
-| Panel de administración | Administrador | Dashboard (resumen + accesos) |
+| Panel de administración | Administrador | Dashboard (indicadores + reportes pendientes) |
 | Gestión de usuarios | Administrador | Índice + CRUD |
 | Moderación (publicaciones/comentarios) | Administrador | Índice filtrable + acción de bloqueo |
 | Reportes y veto | Administrador | Índice + detalle de reporte |
 
 ## 3. Unidades visuales por tipo de página
 
-- **Header global** (autenticado): logo, buscador, íconos de Mensajes/Notificaciones, avatar con menú de cuenta.
-- **Header público** (visitante): logo, enlaces Iniciar sesión / Registrarse.
-- **Navegación principal**: bottom nav en mobile (5 ítems: Inicio, Buscar, Adopción/Socialización, Mensajes, Perfil), barra lateral o top nav en desktop.
-- **Card de publicación**: avatar + nombre + fecha, texto, imagen opcional, acciones (comentar, etiquetas), contador de comentarios.
-- **Card de mascota** (feed adopción/socialización): foto, nombre, especie/temperamento, distancia, botón de acción.
-- **Card de usuario** (resultados de búsqueda, lista de seguidos): avatar, nombre/username, botón seguir.
-- **Formulario**: campos agrupados, validación inline, botón primario de envío.
-- **Bandeja de chat**: lista de conversaciones (avatar, último mensaje, hora, badge no leído) + panel de conversación (burbujas, input).
-- **Panel de notificaciones**: lista cronológica con ícono por tipo (comentario, solicitud, chat).
-- **Tabla de administración**: filas de usuarios/publicaciones/comentarios con acciones (editar, bloquear, vetar).
-- **Footer**: solo en páginas públicas (landing/registro).
+- **Barra superior** (autenticado): logo, buscador global, íconos de Notificaciones y Mensajes con contador, avatar.
+- **Barra superior pública** (visitante): logo y enlace a Iniciar sesión / Crear cuenta.
+- **Navegación principal**: barra inferior en mobile con 5 accesos (Inicio, Buscar, Adopción destacado al centro, Mensajes, Perfil); barra lateral fija en desktop con los mismos accesos más Notificaciones y el botón Publicar.
+- **Card de publicación**: avatar, nombre, usuario, ubicación y fecha; texto; imagen opcional; acciones (me gusta, comentar); etiqueta "En adopción" cuando corresponde.
+- **Card de mascota** (feed de adopción, perfil): foto 4:3, distancia, nombre, especie, edad y sexo.
+- **Card de usuario** (resultados de búsqueda, sugerencias): avatar, nombre, usuario, ciudad y botón Seguir.
+- **Formulario**: campos agrupados con etiquetas, texto de ayuda, selectores segmentados (especie, sexo), chips (temperamento), campo de fecha, interruptor (poner en adopción).
+- **Bandeja de chat**: bloque de peticiones (aceptar / rechazar) y lista de conversaciones con último mensaje, hora y contador; en desktop, panel dividido con la conversación al lado.
+- **Conversación**: mensaje de sistema que indica que el chat se abrió por una postulación, burbujas propias y ajenas con hora, campo de envío.
+- **Lista de notificaciones**: ícono por tipo (adopción, comentario, petición, seguidor), texto, tiempo y acción rápida.
+- **Tablas y tarjetas de administración**: indicadores, tabla de usuarios con estado y acciones (editar, vetar, eliminar), tarjetas de reportes con acción de bloqueo o veto.
 
 ## 4. Elementos individuales recurrentes
 
-Botón primario/secundario, enlace de texto, ícono (lupa, campana, sobre, corazón/seguir, adopción-pata, chat), título de sección, párrafo de descripción, campo de formulario (texto, fecha, selector especie/sexo, textarea, carga de imagen), avatar circular, badge de contador, barra de progreso (wizard de registro), chip de filtro (especie, cercanía), estrella/etiqueta de estado (pendiente/aceptada/rechazada).
+Botón primario (terracota), secundario (contorno), oscuro y de peligro; enlace de texto; íconos lineales (casa, lupa, huella, burbuja, campana, persona, corazón, pin, filtro, calendario, cámara, escudo, bandera); títulos en Bricolage Grotesque; texto en Figtree; campo de texto, área de texto, campo de fecha, selector segmentado, chip, interruptor; avatar circular; etiqueta de estado (En adopción, Activa, Reportes, Vetada); contador numérico; barra de progreso del registro.
 
 ## 5. Patrones de navegación
 
-- **Índice**: feed principal, feed de adopción, feed de socialización, resultados de búsqueda, lista de chats, lista de mascotas propias, tabla de usuarios en administración. Todos son listados homogéneos con selección hacia un detalle.
-- **Menú**: bottom nav (mobile) / barra superior o lateral (desktop) con 5 accesos fijos para el Usuario; el Administrador tiene un menú lateral propio con 4 secciones (Panel, Usuarios, Moderación, Reportes). No hay submenús desplegables; se prioriza navegación plana de un nivel para no perder al usuario (ver mapa de navegación, máximo 3 niveles de profundidad).
-- **Visita guiada**: flujo de registro (datos básicos → perfil humano → opcional primera mascota) y flujo de postulación (ver mascota en adopción/socialización → confirmar solicitud → redirección automática al chat abierto con el dueño), reflejando el `<<include>>` de `UC_initchat` en el diagrama de casos de uso.
-- **Consulta**: buscador único en el header global, visible en todas las páginas autenticadas, con resultados segmentados en pestañas (Usuarios / Mascotas / Publicaciones).
+- **Índice**: feed principal, feed de adopción, resultados de búsqueda, lista de chats, notificaciones, mascotas propias, tabla de usuarios y tarjetas de reportes.
+- **Menú**: barra inferior (mobile) o lateral (desktop) con accesos fijos para el Usuario; menú lateral propio del Administrador (Panel, Usuarios, Publicaciones, Comentarios, Reportes). Sin submenús: navegación plana con un máximo de tres niveles de profundidad.
+- **Visita guiada**: registro en dos pasos (cuenta, luego perfil humano) y postulación a adopción (ver mascota, confirmar postulación con un mensaje, redirección automática al chat abierto con el dueño), que refleja el `<<include>>` de `UC_initchat` en el diagrama de casos de uso.
+- **Consulta**: buscador único en la barra superior, visible en todas las páginas autenticadas, con resultados por pestañas (Usuarios, Mascotas, Publicaciones). En el feed de adopción hay además filtros por especie, edad y distancia.
 
 ## 6. Preguntas de arquitectura de información
 
-- **Áreas de contenido y servicio**: Muro social (publicaciones), Mascotas (perfiles y feeds de adopción/socialización), Mensajería, Administración/moderación.
-- **Zona de navegación**: header fijo + bottom nav en mobile; header + sidebar fija en desktop. Persistente en todas las páginas autenticadas.
-- **Sistemas de ayuda**: tooltips en íconos y texto de ayuda bajo campos de formulario (ej. explicación de "estaVetado", criterios de adopción); no se contempla un centro de ayuda separado en el MVP.
-- **Formularios vs. listados**: formularios en Cuenta y acceso, Crear/editar mascota, Crear publicación, Editar perfil; listados en todo lo demás (feeds, búsqueda, mensajes, administración).
+- **Áreas de contenido y servicio**: Muro social (publicaciones y comentarios), Mascotas (perfiles y feed de adopción), Mensajería, Notificaciones, Administración y moderación.
+- **Zona de navegación**: barra superior más barra inferior en mobile; barra superior más lateral fija en desktop. Persistente en todas las páginas autenticadas.
+- **Sistemas de ayuda**: textos de ayuda bajo los campos de formulario, mensajes de sistema dentro del chat y avisos contextuales (por ejemplo "Se abrirá un chat con Carlos"). No se contempla un centro de ayuda separado en el MVP.
+- **Formularios vs. listados**: formularios en Cuenta y acceso, Editar perfil, Crear/editar mascota, Postulación; listados en todo lo demás.
 
 ## 7. Diseño de interacción, navegación e interfaz
 
-- **Interacción**: el usuario logra sus objetivos (postularse a adopción, socializar, chatear) en máximo 3 pasos desde el feed correspondiente; la apertura automática del chat al postularse (regla `<<include>>`) evita un paso manual extra.
-- **Navegación**: sin enlaces externos salvo compartir (fuera de MVP); enlaces intra-page en el feed de notificaciones (saltan directo al comentario/chat referido); nombres de enlaces en lenguaje cercano al usuario ("Ver mascotas", "Mis chats", "Buscar amigos peludos" en vez de términos técnicos).
-- **Interfaz**: iconografía de patas/huella para adopción y socialización, corazón para seguir, sobre para mensajes, campana para notificaciones. Metáfora de card para publicaciones y perfiles de mascota; carrusel para múltiples fotos de mascota.
+- **Interacción**: postularse a una adopción toma tres toques desde el feed de adopción (abrir mascota, postularme, enviar). La apertura automática del chat evita un paso manual. La postulación se puede cancelar desde el mismo chat.
+- **Navegación**: sin enlaces externos en el MVP; las notificaciones enlazan directo al chat, comentario o mascota referida; nombres en lenguaje cercano ("Postularme para adoptar", "Ver a Toby", "Personas que quizá conoces").
+- **Interfaz**: huella como ícono de Adopción y del logo; corazón para guardar; burbuja para mensajes; campana para notificaciones. Cards para publicaciones y mascotas; galería de miniaturas en el detalle de la mascota; bottom sheet en mobile y modal en desktop para la postulación.
 
-## 8. Internacionalización
+## 8. Sistema visual del prototipo
 
-Textos de interfaz (labels, botones, mensajes de validación) no provienen del modelo de dominio y quedan sujetos a i18n: se recomienda externalizarlos en archivos planos JSON por idioma (`es.json` como default, `en.json` a futuro) en vez de guardarlos en BD, ya que no cambian por usuario. Los valores enumerados del dominio (`especie: perro/gato`, `tipo de solicitud`) si se traducen, requieren un diccionario de etiquetas asociado al enum, no cambio de modelo. No se identificó impacto que obligue a modificar `modelo_dominio.puml`.
+- **Tipografía**: Bricolage Grotesque (titulares, 600 a 800) y Figtree (texto, 400 a 700). Ambas en Google Fonts y disponibles en Figma.
+- **Color**: fondo crema `#FBF7F2`, superficie `#FFFDFA`, texto `#1F1A17`, texto secundario `#7A6F68`, acento terracota `#E8683A` (acciones principales y adopción), verde `#3F7D5A` para estados positivos, ámbar y rojo para moderación.
+- **Radios**: 8, 14 y 20 px, más píldora para botones y chips.
+- **Retícula**: mobile a una columna sobre 360 px con márgenes de 16 px; desktop sobre 12 columnas en 1440 px, con barra lateral de 240 px, contenido central de 680 px y columna auxiliar de 320 px. En mobile la columna auxiliar se oculta y la barra lateral se convierte en barra inferior.
 
-## 9. Wireframes
+## 9. Datos del modelo en pantalla
 
-Ver carpeta `wireframes/` — `mobile.html` (360×640, mobile first) y `desktop.html` (1440×1024), pantallas de bloque gris de baja fidelidad, una por cada tipo de página de la sección 2. Sirven de borrador local antes de pasar a Figma.
+Las pantallas muestran los atributos del `modelo_dominio.puml`: `Usuario` (username, email), `PerfilHumano` (nombre, foto, ci, fechaNacimiento, genero, descripcion, ciudad), `PerfilMascota` (nombre, especie, sexo, temperamento, fechaNacimiento, descripcion, foto, enAdopcion), `Publicacion`, `Comentario`, `Solicitud` (tipo adopción, estado, caracteristicasBuscadas), `Chat`, `Mensaje`, `Notificacion` y `Administrador`. Las fechas se presentan como fechas (campo con calendario en formularios, formato corto en listados) y no como texto libre.
+
+## 10. Internacionalización
+
+Los textos de interfaz (etiquetas, botones, mensajes de ayuda y de sistema) no provienen del modelo de dominio y quedan sujetos a i18n. Se recomienda externalizarlos en archivos planos JSON por idioma (`es.json` por defecto, `en.json` a futuro) en lugar de guardarlos en base de datos, porque no varían por usuario. Los valores enumerados del dominio (`especie`, `sexo`, `tipo` y `estado` de la solicitud) se traducen con un diccionario de etiquetas asociado al enum. No se detectó impacto que obligue a modificar el modelo, salvo eliminar del alcance del MVP los valores `pareja` y `socializar` del enum `tipo` de `Solicitud` y los booleanos `buscaPareja` y `buscaSocializar` de `PerfilMascota`.
+
+## 11. Prototipos
+
+Carpeta `prototipo/`: `mobile.html` (Android 360×640, 14 pantallas) y `desktop.html` (1440×1024, 13 pantallas), construidos con `estilos.css` como sistema de diseño compartido. Las imágenes exportadas de cada pantalla están en `prototipo/export/`. La carpeta `wireframes/` conserva la versión de baja fidelidad previa como referencia del proceso.
